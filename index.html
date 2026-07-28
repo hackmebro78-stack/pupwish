@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🎂 Ultimate Birthday Surprise</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- LOADING SCREEN -->
+<!-- ========================= -->
+
+<div id="loader">
+
+<div class="loader-content">
+
+<div class="cake-loader">
+🎂
+</div>
+
+<h1>Loading Birthday Magic...</h1>
+
+<div class="progress-bar">
+<div class="progress"></div>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- PARTICLE BACKGROUND -->
+<!-- ========================= -->
+
+<div id="particles"></div>
+
+<div id="stars"></div>
+
+<div id="hearts"></div>
+
+<div id="balloons"></div>
+
+
+<!-- ========================= -->
+<!-- MAIN APP -->
+<!-- ========================= -->
+
+<div class="container">
+
+<header>
+
+<h1>
+🎉 Ultimate Birthday Surprise 🎉
+</h1>
+
+<p>
+Create a magical birthday experience.
+</p>
+
+</header>
+
+
+<!-- ========================= -->
+<!-- PERSONALIZATION CARD -->
+<!-- ========================= -->
+
+<section class="glass-card">
+
+<h2>Birthday Details</h2>
+
+<form id="birthdayForm">
+
+<div class="input-grid">
+
+<div class="input-box">
+
+<label>
+
+Birthday Person Name
+
+</label>
+
+<input
+type="text"
+id="personName"
+placeholder="Enter Name"
+required>
+
+</div>
+
+
+<div class="input-box">
+
+<label>
+
+Nickname
+
+</label>
+
+<input
+type="text"
+id="nickname"
+placeholder="Nickname">
+
+</div>
+
+
+<div class="input-box">
+
+<label>
+
+Birthday Type
+
+</label>
+
+<select id="gender">
+
+<option>Birthday Boy 👦</option>
+
+<option>Birthday Girl 👧</option>
+
+<option>Best Friend 🎉</option>
+
+<option>Brother 💙</option>
+
+<option>Sister 💖</option>
+
+<option>Father 👔</option>
+
+<option>Mother 🌸</option>
+
+<option>Partner ❤️</option>
+
+</select>
+
+</div>
+
+
+<div class="input-box">
+
+<label>
+
+Age
+
+</label>
+
+<input
+type="number"
+id="age"
+placeholder="Age">
+
+</div>
+
+
+<div class="input-box">
+
+<label>
+
+Birthday Date
+
+</label>
+
+<input
+type="date"
+id="birthdayDate">
+
+</div>
+
+
+<div class="input-box">
+
+<label>
+
+Sender Name
+
+</label>
+
+<input
+type="text"
+id="sender"
+placeholder="Your Name">
+
+</div>
+
+
+<div class="input-box">
+
+<label>
+
+Theme
+
+</label>
+
+<select id="theme">
+
+<option value="royal">
+Royal Gold
+</option>
+
+<option value="galaxy">
+Galaxy
+</option>
+
+<option value="neon">
+Neon
+</option>
+
+<option value="rose">
+Rose Pink
+</option>
+
+<option value="cute">
+Cute
+</option>
+
+<option value="anime">
+Anime
+</option>
+
+</select>
+
+</div>
+
+
+<div class="input-box">
+
+<label>
+
+Favorite Color
+
+</label>
+
+<input
+type="color"
+id="favColor">
+
+</div>
+
+</div>
+
+
+<label class="upload">
+
+📸 Upload Birthday Photo
+
+<input
+type="file"
+id="photo"
+accept="image/*">
+
+</label>
+
+
+<label class="upload">
+
+🎥 Upload Birthday Video
+
+<input
+type="file"
+id="video"
+accept="video/*">
+
+</label>
+
+
+<label class="upload">
+
+🎵 Upload Birthday Music
+
+<input
+type="file"
+id="music"
+accept="audio/*">
+
+</label>
+
+
+<textarea
+
+id="customWish"
+
+placeholder="Write your own birthday wish...">
+
+</textarea>
+
+
+<button type="submit" class="btn">
+
+Generate Birthday Surprise
+
+</button>
+
+</form>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- SURPRISE SECTION -->
+<!-- ========================= -->
+
+<section id="surpriseSection" class="hidden">
+
+<div class="gift-container">
+
+<div id="giftBox">
+
+🎁
+
+</div>
+
+<p>
+
+Click the Gift
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- REVEAL CARD -->
+<!-- ========================= -->
+
+<section id="birthdayCard" class="hidden">
+
+<div class="card">
+
+<img id="profileImage">
+
+<h1 id="wishTitle">
+
+Happy Birthday
+
+</h1>
+
+<h2 id="displayName">
+
+John
+
+</h2>
+
+<h3 id="displayAge">
+
+18 Years
+
+</h3>
+
+<p id="displayWish">
+
+Your wish will appear here...
+
+</p>
+
+<div id="countdown"></div>
+
+<div class="cake">
+
+🎂
+
+</div>
+
+<button id="download">
+
+Download Card
+
+</button>
+
+<button id="share">
+
+Share
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================= -->
+<!-- MUSIC PLAYER -->
+<!-- ========================= -->
+
+<audio
+id="audioPlayer"
+controls>
+
+</audio>
+
+
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+Made with ❤️ using HTML CSS & JavaScript
+
+</footer>
+
+</div>
+
+
+
+<!-- ========================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
